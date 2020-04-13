@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #one {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+    }
+</style>
+<body>
+Do you love me?
+<br>
+<input type="button" value="Yes" onclick="ClickYes();">
+<input type="button" id=one value="No" onmouseover="ClickNo();">
+<script>
+    function ClickYes() {
+        alert("<3");
+    }
+
+    function ClickNo() {
+        // math.random tra ve 1 so ngẫu nhiên trong khoảng 0 den 1
+        let top = Math.round(Math.random() * 500);
+        let left = Math.round(Math.random() * 500);
+        // (.style. gia tri can thay doi) để thay đổi thuộc tính
+        document.getElementById("one").style.left = left + "px";
+        document.getElementById("one").style.top = top + "px";
+    }
+</script>
+</body>
+</html>
